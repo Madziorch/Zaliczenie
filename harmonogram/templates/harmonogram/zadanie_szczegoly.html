@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="{% url 'harmonogram:zadanie-lista' %}"><input type='submit' value='Cofnij' /></a>
+<h1>Temat: {{ object.temat }}</h1>
+<p>Opis: {{ object.opis }}</p>
+
+
+<p>Uwagi: {{ object.uwagi }}</p>
+<p>Zrealizowany: {{ object.zrealizowany }}</p>
+
+<a href="{% url 'harmonogram:zadanie-edytuj' object.id %}"><input type='submit' value='Edytuj' /></a>
+<a href="{% url 'harmonogram:zadanie-usun' object.id %}"><input type='submit' value='Usuń' /></a>
+
+
+{% endblock %}

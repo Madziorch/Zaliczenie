@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="{% url 'harmonogram:zadanie-szczegoly' object.id %}"><input type='submit' value='Cofnij' /></a>
+<h1>Edytuj: {{ object.id }} - {{ object.temat }}</h1>
+
+<form action='.' method='POST'>{% csrf_token %}
+	{{ form.as_p}}
+<input type='submit' value='Zapisz' />
+</form>
+{% endblock %}

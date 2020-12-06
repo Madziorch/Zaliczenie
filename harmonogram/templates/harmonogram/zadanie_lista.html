@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for instance in object_list %}
+	<p>{{ instance.id }} - <a href='{{ instance.get_absolute_url }}'>{{ instance.temat }} (Szczegóły) </a></p>
+{% endfor %}
+
+<a href="/harmonogram/dodaj"><input type='submit' value='Dodaj' /></a>
+
+{% endblock %}

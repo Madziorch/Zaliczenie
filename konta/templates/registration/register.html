@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<a href="/"><input type='submit' value='Cofnij' /></a>
+		<h1>Stwórz nowe konto</h1>
+		<form method="POST">
+			{% csrf_token %}
+			{{form.as_p}}
+			<button>Załóż konto</button>
+		</form>
+{% endblock %}

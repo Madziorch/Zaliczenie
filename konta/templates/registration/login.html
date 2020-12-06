@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<a href="/"><input type='submit' value='Cofnij' /></a>
+		<h1>System logowania</h1>
+		<form method="POST">
+			{% csrf_token %}
+			{{form.as_p}}
+			<a href="{% url 'harmonogram:zadanie-lista' %}">Zaloguj</a>
+			<!-- <button>Zaloguj</button> -->
+		</form>
+{% endblock %}
