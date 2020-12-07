@@ -1,11 +1,12 @@
 <!doctype html>
 <html>
 <head>
-	<title>Harmonogram Spółdzielni Świetlik</title>
+	<title style="display:inline">Harmonogram Spółdzielni Świetlik</title>
 </head>
 <body>
-	{% include 'navbar.html' %}
 
+	{% include 'navbar.html' %}
+<a style="margin-left:50px" href="{% url 'logout' %}"><button>Wyloguj</button></a>
  {% block content %}
 
  {% endblock %}
